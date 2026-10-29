@@ -30,4 +30,4 @@ Capturas de ejecución real guardadas en una carpeta de proyecto y fecha del Esc
 - La interfaz ofrece audio y autoevaluación oral; no verifica la calidad de la respuesta hablada.
 - No hay sincronización entre dispositivos o notificaciones de repaso.
 
-El resultado de publicación se registra después de comprobar GitHub Pages.
+Publicación configurada en GitHub Pages, desde la raíz de `main`, con HTTPS forzado. Dirección: https://medinagithub.github.io/masterclass-ingles-en-uso/. La entrega incluye la comprobación del sitio publicado.
