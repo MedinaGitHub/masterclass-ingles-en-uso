@@ -1,0 +1,134 @@
+[
+  {
+    "id": "question",
+    "file": "audio/question.m4a",
+    "text": "Have you run out of tokens or hit any limits?",
+    "voice": "Samantha",
+    "locale": "en-US",
+    "wordsPerMinute": 165,
+    "synthetic": true,
+    "bytes": 26161,
+    "sha256": "f7a527dae232d8433febddb76d61eb9a9ed8a7a44f537ba5653a712ffd700593"
+  },
+  {
+    "id": "full",
+    "file": "audio/full.m4a",
+    "text": "I used to run out of tokens pretty often when I was using Fable. I'd hit both the daily and weekly limits, but since switching to Opus 5.5, I've been fine. I haven't hit any limits.",
+    "voice": "Samantha",
+    "locale": "en-US",
+    "wordsPerMinute": 165,
+    "synthetic": true,
+    "bytes": 94587,
+    "sha256": "babafaf0788c153f4b0efcb22b358ec3ed1e0f6760690f24be0361464d90fe9f"
+  },
+  {
+    "id": "habit",
+    "file": "audio/habit.m4a",
+    "text": "I used to run out of tokens pretty often.",
+    "voice": "Samantha",
+    "locale": "en-US",
+    "wordsPerMinute": 165,
+    "synthetic": true,
+    "bytes": 25993,
+    "sha256": "05496c3c4a92c10b827551292cd2f163a077324cf87ce625f05d50df7565cf18"
+  },
+  {
+    "id": "setting",
+    "file": "audio/setting.m4a",
+    "text": "When I was using Fable.",
+    "voice": "Samantha",
+    "locale": "en-US",
+    "wordsPerMinute": 165,
+    "synthetic": true,
+    "bytes": 17767,
+    "sha256": "e71cd7a7dac0983b4bc070a0f523243b1cf0dc881b0c215d77a8a016bd30175c"
+  },
+  {
+    "id": "repeated",
+    "file": "audio/repeated.m4a",
+    "text": "I'd hit both the daily and weekly limits.",
+    "voice": "Samantha",
+    "locale": "en-US",
+    "wordsPerMinute": 165,
+    "synthetic": true,
+    "bytes": 23201,
+    "sha256": "38fa15b970d6fca2ac99b6ffe83552d373fa64a6ad0755cd7faf3c52e768d943"
+  },
+  {
+    "id": "switch",
+    "file": "audio/switch.m4a",
+    "text": "But since switching to Opus 5.5,",
+    "voice": "Samantha",
+    "locale": "en-US",
+    "wordsPerMinute": 165,
+    "synthetic": true,
+    "bytes": 26400,
+    "sha256": "8f5ca8a1876fe5dd6117d9e0e0ae6629ad9d303d154b74c00100ed76456b2554"
+  },
+  {
+    "id": "fine",
+    "file": "audio/fine.m4a",
+    "text": "I've been fine.",
+    "voice": "Samantha",
+    "locale": "en-US",
+    "wordsPerMinute": 165,
+    "synthetic": true,
+    "bytes": 13182,
+    "sha256": "815f5b7718a2c959befe15f248d9ffbf951ce9b50dfa5f0f4d754ac60bee26ed"
+  },
+  {
+    "id": "zero",
+    "file": "audio/zero.m4a",
+    "text": "I haven't hit any limits.",
+    "voice": "Samantha",
+    "locale": "en-US",
+    "wordsPerMinute": 165,
+    "synthetic": true,
+    "bytes": 16538,
+    "sha256": "b6a08590100689f30a9e2ae3d2d1bf19f6b551f4a08c2b479dd14303a3d5a9dd"
+  },
+  {
+    "id": "battery",
+    "file": "audio/battery.m4a",
+    "text": "My phone used to run out of battery by lunchtime. Since I replaced it, it's been fine.",
+    "voice": "Samantha",
+    "locale": "en-US",
+    "wordsPerMinute": 165,
+    "synthetic": true,
+    "bytes": 49176,
+    "sha256": "e220f36d5dc910dddc41220b337d90d705cd6fbf089877efd77ba74817212689"
+  },
+  {
+    "id": "routine",
+    "file": "audio/routine.m4a",
+    "text": "I used to stay up late. Since changing my routine, I've been sleeping better.",
+    "voice": "Samantha",
+    "locale": "en-US",
+    "wordsPerMinute": 165,
+    "synthetic": true,
+    "bytes": 44891,
+    "sha256": "7ee5c44f58dea7899371efee79d1d338e96615d709d975044dba92f59b46e9e9"
+  },
+  {
+    "id": "transfer",
+    "file": "audio/transfer.m4a",
+    "text": "I used to run out of time before meetings. Since changing my schedule, I've been finishing on time.",
+    "voice": "Samantha",
+    "locale": "en-US",
+    "wordsPerMinute": 165,
+    "synthetic": true,
+    "bytes": 53422,
+    "sha256": "429918bea700151c3b801c7b7252a3ee53abf3efec55063ae8b24a3a969cc28d"
+  },
+  {
+    "id": "short",
+    "file": "audio/short.m4a",
+    "text": "I used to, but since switching to Opus 5.5, I've been fine. I haven't hit any limits.",
+    "voice": "Samantha",
+    "locale": "en-US",
+    "wordsPerMinute": 165,
+    "synthetic": true,
+    "bytes": 54625,
+    "sha256": "12b05070436e60cb0c7f2e6d7c636f29b70f1b0791422783a49d7b94bcceb36f"
+  }
+]
