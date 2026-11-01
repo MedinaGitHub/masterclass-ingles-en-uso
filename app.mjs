@@ -1,4 +1,5 @@
-import {audioTexts,scenes,questions,prompts,chunks,wouldExamples,normalizeProgress} from './content.mjs?v=20261101-would-examples';
+import {audioTexts,scenes,questions,prompts,chunks,wouldExamples,normalizeProgress} from './content.mjs?v=20261101-guided-v2';
+import {initLessonNavigation} from './lesson-navigation.mjs?v=20261101-guided-v2';
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 const escape = text => String(text).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -9,13 +10,6 @@ function save(){try{localStorage.setItem(KEY,JSON.stringify(progress));}catch{ca
 if(!canStore)save();
 
 $('#would-examples-list').innerHTML=wouldExamples.map((example,i)=>`<li class="would-example"><span class="would-number" aria-hidden="true">0${i+1}</span><div><p class="small-label">${escape(example.context)}</p><p class="would-sentence" lang="en">${escape(example.lead)}<mark>${escape(example.focus)}</mark>${escape(example.tail)}</p><p class="would-intent">${escape(example.intent)}</p><button class="audio-button" data-audio="${example.id}">▶ Escuchar el ejemplo ${i+1}</button></div></li>`).join('');
-function revealWouldExamples(){
- if(location.hash!=='#would-examples')return;
- $('.teacher-note').open=true;
- requestAnimationFrame(()=>$('#would-examples').scrollIntoView({block:'start'}));
-}
-window.addEventListener('hashchange',revealWouldExamples);
-revealWouldExamples();
 
 // One shared player prevents overlapping examples and keeps playback controls accessible.
 const player=$('#audio-player');
@@ -23,6 +17,8 @@ let activeAudio='';
 async function playAudio(id){
   if(!audioTexts[id])return;
   activeAudio=id;
+  $('#lesson-player').hidden=false;
+  document.body.classList.add('audio-open');
   player.src=new URL(`audio/${id}.mp3`,import.meta.url).href;
   player.playbackRate=Number($('#audio-speed').value);
   $('#audio-label').textContent=id==='full'?'La respuesta completa':id==='question'?'La pregunta de Jamie':audioTexts[id];
@@ -31,6 +27,7 @@ async function playAudio(id){
 }
 document.addEventListener('click',event=>{const button=event.target.closest('[data-audio]');if(button)playAudio(button.dataset.audio);});
 $('#audio-speed').addEventListener('change',()=>{player.playbackRate=Number($('#audio-speed').value);});
+$('#player-close').addEventListener('click',()=>{player.pause();$('#lesson-player').hidden=true;document.body.classList.remove('audio-open');});
 player.addEventListener('error',()=>{$('#audio-status').textContent='No se pudo cargar este audio. El texto sigue disponible; vuelve a intentarlo cuando haya conexión.';});
 $('#transcript-toggle').addEventListener('click',()=>{
   const show=$('#transcript').hidden;$('#transcript').hidden=!show;$('#listen-cover').hidden=show;
@@ -52,8 +49,8 @@ $('#scene-nav').innerHTML=scenes.map((scene,i)=>`<button data-scene="${i}" aria-
 function renderScene(){
  const scene=scenes[sceneIndex];
  $$('[data-scene]').forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.scene)===sceneIndex)));
- $('#scene-panel').innerHTML=`<p class="eyebrow">${scene.intent}</p><h3 lang="en">${scene.title}</h3><p>${scene.explain}</p><div class="visual-timeline" role="img" aria-label="${escape(scene.caption)}"><div class="era-block"><span>${scene.past}</span><div class="event-row" aria-hidden="true">${scene.pastEvents}</div></div><span class="timeline-arrow" aria-hidden="true">→</span><div class="era-block new-era"><span>${scene.now}</span><div class="event-row" aria-hidden="true">${scene.nowEvents}</div></div></div><div class="timeline-caption"><span>ANTES</span><span class="now-dot">AHORA ●</span></div><p class="scene-insight">${scene.insight}</p><div class="scene-bottom"><button class="audio-button" data-audio="${scene.id}">▶ Escuchar este bloque</button><button class="text-toggle" id="scene-next">${sceneIndex===scenes.length-1?'Volver al comienzo ↺':'Siguiente pieza →'}</button></div>`;
- $('#scene-next').addEventListener('click',()=>{sceneIndex=(sceneIndex+1)%scenes.length;renderScene();$('#scene-next').focus({preventScroll:true});});
+ $('#scene-panel').innerHTML=`<p class="eyebrow">PIEZA ${sceneIndex+1} DE ${scenes.length} · ${scene.intent}</p><h3 lang="en">${scene.title}</h3><p>${scene.explain}</p><div class="visual-timeline" role="img" aria-label="${escape(scene.caption)}"><div class="era-block"><span>${scene.past}</span><div class="event-row" aria-hidden="true">${scene.pastEvents}</div></div><span class="timeline-arrow" aria-hidden="true">→</span><div class="era-block new-era"><span>${scene.now}</span><div class="event-row" aria-hidden="true">${scene.nowEvents}</div></div></div><div class="timeline-caption"><span>ANTES</span><span class="now-dot">AHORA ●</span></div><p class="scene-insight">${scene.insight}</p><div class="scene-bottom"><button class="audio-button" data-audio="${scene.id}">▶ Escuchar este bloque</button><button class="text-toggle" id="scene-next">${sceneIndex===scenes.length-1?'Continuar: would en uso →':'Siguiente pieza →'}</button></div>`;
+ $('#scene-next').addEventListener('click',()=>{if(sceneIndex===scenes.length-1){location.hash='#would-examples';return;}sceneIndex++;renderScene();$('#scene-next').focus({preventScroll:true});});
 }
 $('#scene-nav').addEventListener('click',event=>{const b=event.target.closest('[data-scene]');if(b){sceneIndex=Number(b.dataset.scene);renderScene();}});
 renderScene();
@@ -81,7 +78,7 @@ function renderQuiz(focus=false){
  $('#quiz-feedback').textContent='';$('#quiz-feedback').className='quiz-feedback';$('#quiz-next').hidden=true;
  if(quizIndex>=questions.length){
   $('#quiz-count').textContent='LAS 8 ESCENAS RESUELTAS';
-  $('#quiz-card').innerHTML='<h3 tabindex="-1">Ya decidiste con la escena en mente.</h3><p>Ahora prueba algo distinto: responde en voz alta a una pregunta nueva sin mirar el modelo. Reconocer una respuesta y producirla son tareas diferentes.</p><a class="button dark" href="#habla">Ir a mi conversación →</a> <button class="text-toggle" id="restart-quiz">Practicar las ocho otra vez</button>';
+  $('#quiz-card').innerHTML='<h3 tabindex="-1">Ya decidiste con la escena en mente.</h3><p>Lo siguiente es preparar la respuesta por bloques. Después pasarás a una conversación sin modelo.</p><a class="button dark" href="#ritmo">Continuar: repetir en bloques →</a> <button class="text-toggle" id="restart-quiz">Practicar las ocho otra vez</button>';
   $('#restart-quiz').addEventListener('click',()=>{quizIndex=0;renderQuiz(true);});
  }else{
   const q=questions[quizIndex];quizAnswered=false;
@@ -100,7 +97,7 @@ $('#quiz-card').addEventListener('click',event=>{
 });
 $('#quiz-next').addEventListener('click',()=>{quizIndex++;renderQuiz(true);});renderQuiz();
 
-$('#chunk-practice').innerHTML=chunks.map(chunk=>`<div class="chunk-row"><button data-audio="${chunk.audio}" aria-label="Escuchar ${escape(audioTexts[chunk.audio])}">▶</button><span><span lang="en">${escape(chunk.text)}</span><small>${chunk.cue}</small></span></div>`).join('');
+$('#chunk-practice').innerHTML=chunks.map((chunk,i)=>`<div class="chunk-row"><button data-audio="${chunk.audio}" aria-label="Escuchar ${escape(audioTexts[chunk.audio])}">▶</button><span><small class="chunk-count">BLOQUE ${i+1} DE ${chunks.length}</small><span lang="en">${escape(chunk.text)}</span><small>${chunk.cue}</small></span></div>`).join('');
 let promptIndex=0,timer=null,seconds=30,supportDuringAttempt=false;
 function stopTimer(message='Intento terminado. Compara tu idea cuando quieras.'){
  clearInterval(timer);timer=null;$('#timer-status').textContent=message;$('#timer-stop').hidden=true;$('.timer-row').classList.remove('running');$('#speak-start').disabled=false;$('#speak-start').textContent='Intentar otra vez sin pistas · 30 s';
@@ -139,3 +136,7 @@ $('#reset-progress').addEventListener('click',()=>{
  progress=normalizeProgress(null);save();quizIndex=0;renderQuiz();renderPrompt();renderRecall();$('#reset-status').textContent='Progreso local borrado. Puedes comenzar de nuevo.';
 });
 renderPrompt();renderRecall();
+initLessonNavigation({onLeave:()=>{
+ player.pause();$('#lesson-player').hidden=true;document.body.classList.remove('audio-open');
+ if(timer)stopTimer('Intento pausado al cambiar de paso. Puedes volver a intentarlo cuando quieras.');
+}});

@@ -49,3 +49,8 @@ Publicación configurada en GitHub Pages, desde la raíz de `main`, con HTTPS fo
 - Cada ejemplo tiene contexto, foco verbal resaltado, intención comunicativa y audio Adam Spencer / Eleven v4. Se generaron solo cinco archivos nuevos; los doce anteriores se reutilizaron.
 - El banco ahora contiene 17 audios; las cuatro pruebas validan también la identidad y el checksum de los cinco nuevos.
 - El enlace `#would-examples` abre la nota y lleva directamente al bloque. En navegador se comprobaron cinco ejemplos visibles y la reproducción del segundo y el quinto.
+
+
+## Ruta guiada — 1 de noviembre de 2026
+
+La lección se organiza en siete pasos con un panel visible, posición actual, instrucción y Anterior/Continuar. Se probó el recorrido completo hasta repaso en un origen de prueba separado, incluido audio, ocho decisiones y autoevaluación. Retomar, historial, foco por teclado y vista móvil de 320 px comprobados. Siete pruebas aprobadas. Véase [revisión con capturas](ruta-guiada.md).
