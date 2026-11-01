@@ -7,3 +7,19 @@
 @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 
 .listening-detail{border-top:1px solid var(--line);margin-top:20px;padding-top:20px}.listening-detail button{display:block;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:8px;margin-top:8px;width:100%;padding:12px 16px;font-size:13px;color:var(--ink)}
+
+.would-examples{margin:28px 0 32px;padding:28px;background:var(--white);border:1px solid var(--line);border-radius:14px;color:var(--ink);scroll-margin-top:115px}
+.would-examples h3{font-family:Manrope,system-ui,sans-serif;font-size:25px;line-height:1.25;letter-spacing:-.04em;margin:0 0 15px}
+.would-examples>.eyebrow{font-size:10px;margin-bottom:12px;color:var(--muted)}
+.would-examples>p{font-size:13px;line-height:1.8}
+.would-map{display:flex;align-items:center;justify-content:space-between;gap:15px;background:var(--sage);padding:17px 20px;border-radius:9px;margin:22px 0 10px}
+.would-map span{font-size:9px;letter-spacing:.07em}.would-map b{font-size:21px;letter-spacing:4px;white-space:nowrap;color:#526a32}
+#would-examples-list{list-style:none;margin:0;padding:0}
+.would-example{display:grid;grid-template-columns:32px 1fr;gap:16px;padding:25px 0;border-bottom:1px solid var(--line)}
+.would-number{font-size:10px;color:var(--muted);padding-top:3px}
+.would-example .small-label{font-size:9px;letter-spacing:.08em;margin:0 0 10px;color:var(--muted)}
+.would-sentence{font-size:21px;line-height:1.65;letter-spacing:-.02em;margin-bottom:10px}
+.would-sentence mark{background:var(--lime);color:var(--ink);padding:1px 4px;border-radius:3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.would-intent{font-size:13px;line-height:1.7;color:var(--muted);margin-bottom:4px}
+.would-recall{margin:22px 0 0}
+@media(max-width:720px){.would-examples{padding:20px 16px}.would-examples h3{font-size:23px}.would-map{flex-direction:column;gap:9px;padding:15px}.would-example{grid-template-columns:22px 1fr;gap:10px}.would-sentence{font-size:19px}.would-example .audio-button{font-size:11px}.would-map b{font-size:19px}}

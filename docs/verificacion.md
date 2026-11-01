@@ -41,3 +41,11 @@ Publicación configurada en GitHub Pages, desde la raíz de `main`, con HTTPS fo
 - Reproducción local del nuevo `full.mp3`: `readyState=4`, duración 11,2 segundos y sin error. Comprobada también a velocidad 0,8.
 - Cuatro pruebas de Node aprobadas; el contrato verifica ahora proveedor, voz y modelo de cada audio.
 - La clave se lee de un entorno privado solo durante la generación. No se incorpora al navegador o al repositorio. El generador comprueba acceso y saldo antes del lote, y reutiliza los audios ya generados con la misma configuración.
+
+
+## Cinco ejemplos de would — 1 de noviembre de 2026
+
+- Añadidos cinco ejemplos de acciones habituales en una etapa pasada dentro de la nota del profesor: Fable, café camino al trabajo, reuniones, cuentos de infancia y preparación de un examen.
+- Cada ejemplo tiene contexto, foco verbal resaltado, intención comunicativa y audio Adam Spencer / Eleven v4. Se generaron solo cinco archivos nuevos; los doce anteriores se reutilizaron.
+- El banco ahora contiene 17 audios; las cuatro pruebas validan también la identidad y el checksum de los cinco nuevos.
+- El enlace `#would-examples` abre la nota y lleva directamente al bloque. En navegador se comprobaron cinco ejemplos visibles y la reproducción del segundo y el quinto.

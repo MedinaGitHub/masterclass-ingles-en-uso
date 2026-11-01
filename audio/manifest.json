@@ -238,5 +238,105 @@
     "fingerprint": "043e8012cd55c77ffea6fa35fc78bbe9d3a5d6d65fb49eaae82f64b558d23e25",
     "bytes": 98263,
     "sha256": "2a3530afef2365bd5c226cdc49d06e6fd65cdfe9198a4ce8519c82af3a0dc020"
+  },
+  {
+    "id": "would-fable",
+    "file": "audio/would-fable.mp3",
+    "text": "Back when I was using Fable, I'd hit the daily limit before lunch.",
+    "provider": "ElevenLabs",
+    "voice": "Adam Spencer - Intelligent and Kind",
+    "voiceId": "xKhbyU7E3bC6T89Kn26c",
+    "modelId": "eleven_v4",
+    "outputFormat": "mp3_44100_128",
+    "locale": "en-US",
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75
+    },
+    "synthetic": true,
+    "generatedAt": "2026-11-01T15:12:15.744Z",
+    "fingerprint": "a7bf7d99b609ff265a334b453556d2e06850442250792cf729a7ea1a2d7be34d",
+    "bytes": 62318,
+    "sha256": "7146121eebc87009954bb4310542356054b8465eaa6f67591cd154dfe31236d8"
+  },
+  {
+    "id": "would-coffee",
+    "file": "audio/would-coffee.mp3",
+    "text": "When I worked at the office, I'd grab a coffee on my way in.",
+    "provider": "ElevenLabs",
+    "voice": "Adam Spencer - Intelligent and Kind",
+    "voiceId": "xKhbyU7E3bC6T89Kn26c",
+    "modelId": "eleven_v4",
+    "outputFormat": "mp3_44100_128",
+    "locale": "en-US",
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75
+    },
+    "synthetic": true,
+    "generatedAt": "2026-11-01T15:12:16.996Z",
+    "fingerprint": "e660376c5c3eda638bfa1dee8889575a9da1c11495b939caf15a783c7b740bfc",
+    "bytes": 53541,
+    "sha256": "c5404d9d9295edaa36b6d5b09bdb34d475d54a26ff47403624a4d535a3c5b918"
+  },
+  {
+    "id": "would-meetings",
+    "file": "audio/would-meetings.mp3",
+    "text": "At my old job, we'd start every meeting with a quick check-in.",
+    "provider": "ElevenLabs",
+    "voice": "Adam Spencer - Intelligent and Kind",
+    "voiceId": "xKhbyU7E3bC6T89Kn26c",
+    "modelId": "eleven_v4",
+    "outputFormat": "mp3_44100_128",
+    "locale": "en-US",
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75
+    },
+    "synthetic": true,
+    "generatedAt": "2026-11-01T15:12:18.371Z",
+    "fingerprint": "155511f7570bd0747bfbfb4be2d6e89b9b06005dd895338c36a0d102fb0686eb",
+    "bytes": 58557,
+    "sha256": "82fa82f67ba66e6c3facdb066b659c5f1bd260dac11bf35fa7fc0049a6722cc0"
+  },
+  {
+    "id": "would-bedtime",
+    "file": "audio/would-bedtime.mp3",
+    "text": "When I was a kid, my dad would read me a story every night.",
+    "provider": "ElevenLabs",
+    "voice": "Adam Spencer - Intelligent and Kind",
+    "voiceId": "xKhbyU7E3bC6T89Kn26c",
+    "modelId": "eleven_v4",
+    "outputFormat": "mp3_44100_128",
+    "locale": "en-US",
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75
+    },
+    "synthetic": true,
+    "generatedAt": "2026-11-01T15:12:19.593Z",
+    "fingerprint": "ec8213144382147acf55e8a3ef72582028c6b14b6145071c7ed21e1eb3df46d6",
+    "bytes": 58557,
+    "sha256": "9f120ec57aa38b1bd2ee9c467555c2ad348fc08a0b35bc67c1433170006095d0"
+  },
+  {
+    "id": "would-practice",
+    "file": "audio/would-practice.mp3",
+    "text": "When we were practicing for our English exam, we'd repeat the tricky sentences out loud.",
+    "provider": "ElevenLabs",
+    "voice": "Adam Spencer - Intelligent and Kind",
+    "voiceId": "xKhbyU7E3bC6T89Kn26c",
+    "modelId": "eleven_v4",
+    "outputFormat": "mp3_44100_128",
+    "locale": "en-US",
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75
+    },
+    "synthetic": true,
+    "generatedAt": "2026-11-01T15:12:21.173Z",
+    "fingerprint": "e3019d981a1881ecb5c2dbde66dbabffb05980911b9e7e58c3557ebe4b25c27e",
+    "bytes": 76529,
+    "sha256": "82f87628beccfc1068d4f5e2358ab5f288fe942a50ddb3e6c520d3552dd3b33c"
   }
 ]

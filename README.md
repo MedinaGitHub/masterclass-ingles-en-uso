@@ -7,7 +7,7 @@ Masterclass interactiva en español, con ejemplos y práctica en inglés. Parte 
 ## Recorrido
 
 1. Escuchar una pregunta y su respuesta antes de revelar el texto.
-2. Explorar seis fragmentos con mapas de la historia y audio.
+2. Explorar seis fragmentos con mapas de la historia y audio, más cinco ejemplos de `would` habitual en la nota del profesor.
 3. Manipular consumo/restante/tope y alternar un período cerrado con uno que llega hasta hoy.
 4. Resolver ocho decisiones en contexto con feedback por alternativa y reintento.
 5. Practicar seis grupos de sentido y responder a cuatro situaciones con pistas ocultables, tiempo opcional y autoevaluación.
@@ -31,7 +31,7 @@ node --test tests/*.test.mjs
 node --check app.mjs
 ```
 
-Para regenerar los 12 audios, usa Node.js 22 o posterior y una clave privada de ElevenLabs. El generador comprueba voz, modelo y saldo; reutiliza los archivos ya generados con el mismo texto y perfil:
+Para regenerar los 17 audios, usa Node.js 22 o posterior y una clave privada de ElevenLabs. El generador comprueba voz, modelo y saldo; reutiliza los archivos ya generados con el mismo texto y perfil:
 
 ```sh
 node --env-file=/ruta/privada/.env.local scripts/generate-audio.mjs

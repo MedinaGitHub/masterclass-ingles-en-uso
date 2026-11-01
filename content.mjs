@@ -1,4 +1,11 @@
 export const fullAnswer = "I used to run out of tokens pretty often when I was using Fable. I'd hit both the daily and weekly limits, but since switching to Opus 5.5, I've been fine. I haven't hit any limits.";
+export const wouldExamples = [
+  {id:'would-fable',context:'TU ETAPA CON FABLE',lead:'Back when I was using Fable, ',focus:"I'd hit",tail:' the daily limit before lunch.',intent:'Varias jornadas con la misma interrupción. Tu colega ve un patrón de aquella etapa.'},
+  {id:'would-coffee',context:'EL CAMINO A LA OFICINA',lead:'When I worked at the office, ',focus:"I'd grab",tail:' a coffee on my way in.',intent:'Recuerdas una pequeña rutina: entrar a trabajar e ir por un café una y otra vez.'},
+  {id:'would-meetings',context:'LAS REUNIONES EN TU ANTIGUO TRABAJO',lead:'At my old job, ',focus:"we'd start",tail:' every meeting with a quick check-in.',intent:'Presentas la forma habitual de empezar las reuniones del equipo, no una reunión aislada.'},
+  {id:'would-bedtime',context:'LAS NOCHES DE TU INFANCIA',lead:'When I was a kid, my dad ',focus:'would read',tail:' me a story every night.',intent:'Quien escucha imagina muchas noches con la misma escena: tú, tu papá y un cuento.'},
+  {id:'would-practice',context:'LAS SESIONES ANTES DEL EXAMEN',lead:'When we were practicing for our English exam, ',focus:"we'd repeat",tail:' the tricky sentences out loud.',intent:'Dentro de esa etapa de preparación, repetir las frases difíciles era parte de las sesiones.'},
+];
 export const audioTexts = {
   question: 'Have you run out of tokens or hit any limits?',
   full: fullAnswer,
@@ -12,6 +19,7 @@ export const audioTexts = {
   routine: "I used to stay up late. Since changing my routine, I've been sleeping better.",
   transfer: "I used to run out of time before meetings. Since changing my schedule, I've been finishing on time.",
   short: "I used to, but since switching to Opus 5.5, I've been fine. I haven't hit any limits.",
+  ...Object.fromEntries(wouldExamples.map(example=>[example.id,example.lead+example.focus+example.tail])),
 };
 
 export const scenes = [

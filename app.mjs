@@ -1,4 +1,4 @@
-import {audioTexts,scenes,questions,prompts,chunks,normalizeProgress} from './content.mjs';
+import {audioTexts,scenes,questions,prompts,chunks,wouldExamples,normalizeProgress} from './content.mjs?v=20261101-would-examples';
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 const escape = text => String(text).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -7,6 +7,15 @@ let progress,canStore=true;
 try {progress=normalizeProgress(JSON.parse(localStorage.getItem(KEY)));} catch {progress=normalizeProgress(null);canStore=false;}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(progress));}catch{canStore=false;}if(!canStore)$('#storage-note').textContent='El almacenamiento no está disponible. Puedes completar toda la práctica en esta visita; el avance no se conservará al salir.';}
 if(!canStore)save();
+
+$('#would-examples-list').innerHTML=wouldExamples.map((example,i)=>`<li class="would-example"><span class="would-number" aria-hidden="true">0${i+1}</span><div><p class="small-label">${escape(example.context)}</p><p class="would-sentence" lang="en">${escape(example.lead)}<mark>${escape(example.focus)}</mark>${escape(example.tail)}</p><p class="would-intent">${escape(example.intent)}</p><button class="audio-button" data-audio="${example.id}">▶ Escuchar el ejemplo ${i+1}</button></div></li>`).join('');
+function revealWouldExamples(){
+ if(location.hash!=='#would-examples')return;
+ $('.teacher-note').open=true;
+ requestAnimationFrame(()=>$('#would-examples').scrollIntoView({block:'start'}));
+}
+window.addEventListener('hashchange',revealWouldExamples);
+revealWouldExamples();
 
 // One shared player prevents overlapping examples and keeps playback controls accessible.
 const player=$('#audio-player');
