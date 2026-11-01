@@ -12,7 +12,7 @@ Masterclass interactiva en español, con ejemplos y práctica en inglés. Parte 
 4. Resolver ocho decisiones en contexto con feedback por alternativa y reintento.
 5. Practicar seis grupos de sentido y responder a cuatro situaciones con pistas ocultables, tiempo opcional y autoevaluación.
 
-Los audios son sintéticos (Samantha, en-US). Se sirven desde el mismo sitio. No hay evaluación automática de pronunciación ni garantías de fluidez. Las fechas de repaso son una propuesta de 1/3/7 días desde el primer intento guardado. No se envían notificaciones. El avance se guarda únicamente en localStorage y sigue funcionando durante la visita si el almacenamiento está bloqueado.
+Los audios son sintéticos: ElevenLabs Eleven v4, voz Adam Spencer – Intelligent and Kind (en-US). Se sirven desde el mismo sitio. No hay evaluación automática de pronunciación ni garantías de fluidez. Las fechas de repaso son una propuesta de 1/3/7 días desde el primer intento guardado. No se envían notificaciones. El avance se guarda únicamente en localStorage y sigue funcionando durante la visita si el almacenamiento está bloqueado.
 
 Fable y Opus 5.5 pertenecen al ejemplo proporcionado. No son una afirmación sobre la existencia, funcionamiento o cuotas de esos productos.
 
@@ -31,11 +31,13 @@ node --test tests/*.test.mjs
 node --check app.mjs
 ```
 
-Para regenerar los 12 audios en macOS con Samantha, `say` y `afconvert`:
+Para regenerar los 12 audios, usa Node.js 22 o posterior y una clave privada de ElevenLabs. El generador comprueba voz, modelo y saldo; reutiliza los archivos ya generados con el mismo texto y perfil:
 
 ```sh
-node scripts/generate-audio.mjs
+node --env-file=/ruta/privada/.env.local scripts/generate-audio.mjs
 ```
+
+La clave `ELEVENLABS_API_KEY` solo se usa en el generador local. No se incluye en el código del navegador ni se sube a GitHub. El audio se guarda en MP3 de 44,1 kHz y 128 kbps; los ajustes de voz y el modelo quedan documentados en `audio-config.mjs` y en el manifiesto.
 
 ## Publicación
 

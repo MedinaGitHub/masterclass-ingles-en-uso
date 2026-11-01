@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {questions,scenes,prompts,chunks,audioTexts,normalizeProgress,fullAnswer} from '../content.mjs';
+import {audioProfile} from '../audio-config.mjs';
 test('cada decisión tiene una única respuesta correcta y feedback útil para cada alternativa',()=>{
  assert.equal(questions.length,8);
  assert.equal(new Set(questions.map(q=>q.id)).size,questions.length);
@@ -10,8 +11,10 @@ test('cada decisión tiene una única respuesta correcta y feedback útil para c
 });
 test('las escenas, bloques y situaciones orales tienen audio real con texto y checksum coincidentes',()=>{
  const manifest=JSON.parse(readFileSync(new URL('../audio/manifest.json',import.meta.url)));
+ assert.equal(manifest.length,Object.keys(audioTexts).length);
  for(const id of [...scenes.map(s=>s.id),...chunks.map(c=>c.audio),...prompts.map(p=>p.audio),'question','full']){
   const entry=manifest.find(a=>a.id===id);assert.ok(entry,`Falta ${id}`);assert.equal(entry.text,audioTexts[id]);
+  assert.equal(entry.provider,'ElevenLabs');assert.equal(entry.modelId,'eleven_v4');assert.equal(entry.voiceId,audioProfile.voiceId);assert.equal(entry.voice,audioProfile.voice);
   const bytes=readFileSync(new URL(`../${entry.file}`,import.meta.url));assert.equal(createHash('sha256').update(bytes).digest('hex'),entry.sha256);assert.ok(bytes.length>2000);
  }
  assert.equal(audioTexts.full,fullAnswer);

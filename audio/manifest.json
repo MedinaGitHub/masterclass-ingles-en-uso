@@ -1,134 +1,242 @@
 [
   {
     "id": "question",
-    "file": "audio/question.m4a",
+    "file": "audio/question.mp3",
     "text": "Have you run out of tokens or hit any limits?",
-    "voice": "Samantha",
+    "provider": "ElevenLabs",
+    "voice": "Adam Spencer - Intelligent and Kind",
+    "voiceId": "xKhbyU7E3bC6T89Kn26c",
+    "modelId": "eleven_v4",
+    "outputFormat": "mp3_44100_128",
     "locale": "en-US",
-    "wordsPerMinute": 165,
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75
+    },
     "synthetic": true,
-    "bytes": 26161,
-    "sha256": "f7a527dae232d8433febddb76d61eb9a9ed8a7a44f537ba5653a712ffd700593"
+    "generatedAt": "2026-11-01T15:07:09.455Z",
+    "fingerprint": "e6970a08ded538890f148fab87ca3c853e4fb5d9e5d7820765eaabf075e6860b",
+    "bytes": 44764,
+    "sha256": "4a70ab30a3fbf80bb2ad83b56e550d0121fffc22b0b1295f88ac413692b36386"
   },
   {
     "id": "full",
-    "file": "audio/full.m4a",
+    "file": "audio/full.mp3",
     "text": "I used to run out of tokens pretty often when I was using Fable. I'd hit both the daily and weekly limits, but since switching to Opus 5.5, I've been fine. I haven't hit any limits.",
-    "voice": "Samantha",
+    "provider": "ElevenLabs",
+    "voice": "Adam Spencer - Intelligent and Kind",
+    "voiceId": "xKhbyU7E3bC6T89Kn26c",
+    "modelId": "eleven_v4",
+    "outputFormat": "mp3_44100_128",
     "locale": "en-US",
-    "wordsPerMinute": 165,
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75
+    },
     "synthetic": true,
-    "bytes": 94587,
-    "sha256": "babafaf0788c153f4b0efcb22b358ec3ed1e0f6760690f24be0361464d90fe9f"
+    "generatedAt": "2026-11-01T15:07:13.033Z",
+    "fingerprint": "3ed2eb3b815409f697fd4dff4ae40485783cc810b06d85b7481719f753924d7e",
+    "bytes": 180183,
+    "sha256": "be0a23fc3349ee7b8ed8f72f016ee6b601de622af5b93f65b1cf7fb08cc7eef2"
   },
   {
     "id": "habit",
-    "file": "audio/habit.m4a",
+    "file": "audio/habit.mp3",
     "text": "I used to run out of tokens pretty often.",
-    "voice": "Samantha",
+    "provider": "ElevenLabs",
+    "voice": "Adam Spencer - Intelligent and Kind",
+    "voiceId": "xKhbyU7E3bC6T89Kn26c",
+    "modelId": "eleven_v4",
+    "outputFormat": "mp3_44100_128",
     "locale": "en-US",
-    "wordsPerMinute": 165,
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75
+    },
     "synthetic": true,
-    "bytes": 25993,
-    "sha256": "05496c3c4a92c10b827551292cd2f163a077324cf87ce625f05d50df7565cf18"
+    "generatedAt": "2026-11-01T15:07:14.108Z",
+    "fingerprint": "3b26a847a0d2733626f625ad150d440809ac5acd35dabb96298dee3d62a02491",
+    "bytes": 40585,
+    "sha256": "c0ffddcb1b16d43daee4badbec25f5d5c345797241178ed43c978c6289e26c6a"
   },
   {
     "id": "setting",
-    "file": "audio/setting.m4a",
+    "file": "audio/setting.mp3",
     "text": "When I was using Fable.",
-    "voice": "Samantha",
+    "provider": "ElevenLabs",
+    "voice": "Adam Spencer - Intelligent and Kind",
+    "voiceId": "xKhbyU7E3bC6T89Kn26c",
+    "modelId": "eleven_v4",
+    "outputFormat": "mp3_44100_128",
     "locale": "en-US",
-    "wordsPerMinute": 165,
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75
+    },
     "synthetic": true,
-    "bytes": 17767,
-    "sha256": "e71cd7a7dac0983b4bc070a0f523243b1cf0dc881b0c215d77a8a016bd30175c"
+    "generatedAt": "2026-11-01T15:07:14.933Z",
+    "fingerprint": "9f4e5528f60ad17a0168ce1e4d54e454ebeba506a26fb1a1046629e0a69db6c9",
+    "bytes": 28046,
+    "sha256": "5a96e22cbd09181c5140abce037acff15b5ebee9151ffb4571e2089644bdf872"
   },
   {
     "id": "repeated",
-    "file": "audio/repeated.m4a",
+    "file": "audio/repeated.mp3",
     "text": "I'd hit both the daily and weekly limits.",
-    "voice": "Samantha",
+    "provider": "ElevenLabs",
+    "voice": "Adam Spencer - Intelligent and Kind",
+    "voiceId": "xKhbyU7E3bC6T89Kn26c",
+    "modelId": "eleven_v4",
+    "outputFormat": "mp3_44100_128",
     "locale": "en-US",
-    "wordsPerMinute": 165,
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75
+    },
     "synthetic": true,
-    "bytes": 23201,
-    "sha256": "38fa15b970d6fca2ac99b6ffe83552d373fa64a6ad0755cd7faf3c52e768d943"
+    "generatedAt": "2026-11-01T15:07:15.935Z",
+    "fingerprint": "eec05aab73cb8e63e8baf3d8d097f78b13d39325a98e0882359e519dd4626f2a",
+    "bytes": 44764,
+    "sha256": "9ca034edbbc5101b59e5826004da2f31615283e9e8f2029821be800bbe389b8d"
   },
   {
     "id": "switch",
-    "file": "audio/switch.m4a",
+    "file": "audio/switch.mp3",
     "text": "But since switching to Opus 5.5,",
-    "voice": "Samantha",
+    "provider": "ElevenLabs",
+    "voice": "Adam Spencer - Intelligent and Kind",
+    "voiceId": "xKhbyU7E3bC6T89Kn26c",
+    "modelId": "eleven_v4",
+    "outputFormat": "mp3_44100_128",
     "locale": "en-US",
-    "wordsPerMinute": 165,
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75
+    },
     "synthetic": true,
-    "bytes": 26400,
-    "sha256": "8f5ca8a1876fe5dd6117d9e0e0ae6629ad9d303d154b74c00100ed76456b2554"
+    "generatedAt": "2026-11-01T15:07:17.050Z",
+    "fingerprint": "ed6523bba5c5cb84ad070bd227176d98629d090a0c582560f1d1475c9b3df2ce",
+    "bytes": 43510,
+    "sha256": "8e7124081e6062e0e0bcfaa5431612914c6ea096ed654c4141ac5427150f5086"
   },
   {
     "id": "fine",
-    "file": "audio/fine.m4a",
+    "file": "audio/fine.mp3",
     "text": "I've been fine.",
-    "voice": "Samantha",
+    "provider": "ElevenLabs",
+    "voice": "Adam Spencer - Intelligent and Kind",
+    "voiceId": "xKhbyU7E3bC6T89Kn26c",
+    "modelId": "eleven_v4",
+    "outputFormat": "mp3_44100_128",
     "locale": "en-US",
-    "wordsPerMinute": 165,
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75
+    },
     "synthetic": true,
-    "bytes": 13182,
-    "sha256": "815f5b7718a2c959befe15f248d9ffbf951ce9b50dfa5f0f4d754ac60bee26ed"
+    "generatedAt": "2026-11-01T15:07:17.794Z",
+    "fingerprint": "4eab426f1b14a1925d9556ae74787bc694e853e00e575d0d4a4f3b23981b3d36",
+    "bytes": 21358,
+    "sha256": "7d82e0430e4dfe0eafc8a7fdb05b022be636d84bd40aa969fa20a17cc4007d83"
   },
   {
     "id": "zero",
-    "file": "audio/zero.m4a",
+    "file": "audio/zero.mp3",
     "text": "I haven't hit any limits.",
-    "voice": "Samantha",
+    "provider": "ElevenLabs",
+    "voice": "Adam Spencer - Intelligent and Kind",
+    "voiceId": "xKhbyU7E3bC6T89Kn26c",
+    "modelId": "eleven_v4",
+    "outputFormat": "mp3_44100_128",
     "locale": "en-US",
-    "wordsPerMinute": 165,
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75
+    },
     "synthetic": true,
-    "bytes": 16538,
-    "sha256": "b6a08590100689f30a9e2ae3d2d1bf19f6b551f4a08c2b479dd14303a3d5a9dd"
+    "generatedAt": "2026-11-01T15:07:18.662Z",
+    "fingerprint": "3a88ad1cf4b42a7137788d3bbfa04a812c02a1a4342f016216c920c1d0cba8c8",
+    "bytes": 29300,
+    "sha256": "aee99dd93453b961ededb1d5c233a41addee78717a648964f0d5d6a118808a51"
   },
   {
     "id": "battery",
-    "file": "audio/battery.m4a",
+    "file": "audio/battery.mp3",
     "text": "My phone used to run out of battery by lunchtime. Since I replaced it, it's been fine.",
-    "voice": "Samantha",
+    "provider": "ElevenLabs",
+    "voice": "Adam Spencer - Intelligent and Kind",
+    "voiceId": "xKhbyU7E3bC6T89Kn26c",
+    "modelId": "eleven_v4",
+    "outputFormat": "mp3_44100_128",
     "locale": "en-US",
-    "wordsPerMinute": 165,
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75
+    },
     "synthetic": true,
-    "bytes": 49176,
-    "sha256": "e220f36d5dc910dddc41220b337d90d705cd6fbf089877efd77ba74817212689"
+    "generatedAt": "2026-11-01T15:07:20.889Z",
+    "fingerprint": "a94c2ce5548bd1793d760f9705d61eb24718947989322ac485c5115327089fac",
+    "bytes": 79037,
+    "sha256": "dee4b7a7f1782841b8fadf9c320a8831b1c634ee3e44f9880ab4d094eabbd220"
   },
   {
     "id": "routine",
-    "file": "audio/routine.m4a",
+    "file": "audio/routine.mp3",
     "text": "I used to stay up late. Since changing my routine, I've been sleeping better.",
-    "voice": "Samantha",
+    "provider": "ElevenLabs",
+    "voice": "Adam Spencer - Intelligent and Kind",
+    "voiceId": "xKhbyU7E3bC6T89Kn26c",
+    "modelId": "eleven_v4",
+    "outputFormat": "mp3_44100_128",
     "locale": "en-US",
-    "wordsPerMinute": 165,
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75
+    },
     "synthetic": true,
-    "bytes": 44891,
-    "sha256": "7ee5c44f58dea7899371efee79d1d338e96615d709d975044dba92f59b46e9e9"
+    "generatedAt": "2026-11-01T15:07:22.482Z",
+    "fingerprint": "a64d7b0a8b33c317579ab7283dafa863c8081ec277b0956a607a778752d205fc",
+    "bytes": 70260,
+    "sha256": "b41e91355768723d0bc03d94fb134bee6427968c09a383931b16b495061e3a9b"
   },
   {
     "id": "transfer",
-    "file": "audio/transfer.m4a",
+    "file": "audio/transfer.mp3",
     "text": "I used to run out of time before meetings. Since changing my schedule, I've been finishing on time.",
-    "voice": "Samantha",
+    "provider": "ElevenLabs",
+    "voice": "Adam Spencer - Intelligent and Kind",
+    "voiceId": "xKhbyU7E3bC6T89Kn26c",
+    "modelId": "eleven_v4",
+    "outputFormat": "mp3_44100_128",
     "locale": "en-US",
-    "wordsPerMinute": 165,
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75
+    },
     "synthetic": true,
-    "bytes": 53422,
-    "sha256": "429918bea700151c3b801c7b7252a3ee53abf3efec55063ae8b24a3a969cc28d"
+    "generatedAt": "2026-11-01T15:07:24.612Z",
+    "fingerprint": "068c92222d47576d546f5216403e23746293e6a189f874fb42856a362e6c036c",
+    "bytes": 86978,
+    "sha256": "c23f1bb7714ed630a6a511dcabe81d1147df385700bdf9e73a3190c81d9b5740"
   },
   {
     "id": "short",
-    "file": "audio/short.m4a",
+    "file": "audio/short.mp3",
     "text": "I used to, but since switching to Opus 5.5, I've been fine. I haven't hit any limits.",
-    "voice": "Samantha",
+    "provider": "ElevenLabs",
+    "voice": "Adam Spencer - Intelligent and Kind",
+    "voiceId": "xKhbyU7E3bC6T89Kn26c",
+    "modelId": "eleven_v4",
+    "outputFormat": "mp3_44100_128",
     "locale": "en-US",
-    "wordsPerMinute": 165,
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75
+    },
     "synthetic": true,
-    "bytes": 54625,
-    "sha256": "12b05070436e60cb0c7f2e6d7c636f29b70f1b0791422783a49d7b94bcceb36f"
+    "generatedAt": "2026-11-01T15:07:26.754Z",
+    "fingerprint": "043e8012cd55c77ffea6fa35fc78bbe9d3a5d6d65fb49eaae82f64b558d23e25",
+    "bytes": 98263,
+    "sha256": "2a3530afef2365bd5c226cdc49d06e6fd65cdfe9198a4ce8519c82af3a0dc020"
   }
 ]

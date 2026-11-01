@@ -14,7 +14,7 @@ let activeAudio='';
 async function playAudio(id){
   if(!audioTexts[id])return;
   activeAudio=id;
-  player.src=new URL(`audio/${id}.m4a`,import.meta.url).href;
+  player.src=new URL(`audio/${id}.mp3`,import.meta.url).href;
   player.playbackRate=Number($('#audio-speed').value);
   $('#audio-label').textContent=id==='full'?'La respuesta completa':id==='question'?'La pregunta de Jamie':audioTexts[id];
   $('#audio-status').textContent='';

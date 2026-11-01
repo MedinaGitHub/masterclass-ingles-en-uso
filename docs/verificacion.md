@@ -31,3 +31,13 @@ Capturas de ejecución real guardadas en una carpeta de proyecto y fecha del Esc
 - No hay sincronización entre dispositivos o notificaciones de repaso.
 
 Publicación configurada en GitHub Pages, desde la raíz de `main`, con HTTPS forzado. Dirección: https://medinagithub.github.io/masterclass-ingles-en-uso/. La entrega incluye la comprobación del sitio publicado.
+
+
+## Actualización de voz — 1 de noviembre de 2026
+
+- Reemplazados los 12 audios de Samantha por ElevenLabs, modelo `eleven_v4`, voz `Adam Spencer - Intelligent and Kind` (`xKhbyU7E3bC6T89Kn26c`).
+- MP3 mono a 44,1 kHz y 128 kbps. Manifiesto con texto, perfil, fecha y checksum de cada archivo; los 12 MP3 se validaron con `afinfo`.
+- Reproductor y créditos actualizados. El módulo tiene una nueva URL de versión para evitar que una pestaña conserve el reproductor M4A anterior.
+- Reproducción local del nuevo `full.mp3`: `readyState=4`, duración 11,2 segundos y sin error. Comprobada también a velocidad 0,8.
+- Cuatro pruebas de Node aprobadas; el contrato verifica ahora proveedor, voz y modelo de cada audio.
+- La clave se lee de un entorno privado solo durante la generación. No se incorpora al navegador o al repositorio. El generador comprueba acceso y saldo antes del lote, y reutiliza los audios ya generados con la misma configuración.
